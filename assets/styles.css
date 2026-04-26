@@ -1,0 +1,1917 @@
+@font-face {
+    font-family: 'Dyuthi';
+    src: url(https://smc.org.in/downloads/fonts/dyuthi/Dyuthi-Regular.woff2?v=Version3.0.2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+* {
+    box-sizing: border-box
+}
+
+:root {
+    --navy: #1d2433;
+    --navy-dark: #141925;
+    --crimson: #c0392b;
+    --crimson-h: #a93226;
+    --gold: #b08a20;
+    --text: #1a1a2a;
+    --muted: #54596e;
+    --bg: #ffffff;
+    --bg-alt: #f6f7f9;
+    --bg-gray: rgb(248, 246, 242);
+    --border: #e2e4eb;
+    --max-w: 1280px;
+    --header-text: rgb(17 24 39/var(--tw-text-opacity, 1));
+    --teal-dark: #202828
+}
+
+body {
+    margin: 0;
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    color: var(--text);
+    background: var(--bg);
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+img {
+    display: block;
+    max-width: 100%
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.25
+}
+
+.container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 1.25rem
+}
+
+.site-header {
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 100
+}
+
+.hdr-inner {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    gap: 0
+}
+
+img#logo {
+    width: 40px;
+    height: 40px
+}
+
+.brand {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--header-text);
+    white-space: nowrap;
+    margin-right: 1.5rem;
+    flex-shrink: 0
+}
+
+.site-nav {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end
+}
+
+.site-nav a {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: .78rem;
+    font-weight: 200;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 0 .85rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid #fff0;
+    transition: color .15s, border-color .15s
+}
+
+.site-nav a:hover {
+    color: var(--text);
+    font-weight: 700;
+    border-bottom-color: var(--gold)
+}
+
+.give-btn {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    background: var(--crimson);
+    color: #fff;
+    padding: .4rem .9rem;
+    border-radius: 3px;
+    flex-shrink: 0;
+    transition: background .15s
+}
+
+.give-btn:hover {
+    background: var(--crimson-h)
+}
+
+.hero-section {
+    background: var(--bg);
+    padding: 4rem 0 3.5rem;
+    border-bottom: 1px solid var(--border)
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1088px
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem
+}
+
+.hero-brand {
+    font-family: 'Dyuthi', 'Noto Serif Malayalam', Georgia, serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--navy-dark);
+    margin: 0
+}
+
+.brand-top-half {
+    font-size: 6.5rem
+}
+
+.brand-bottom-half {
+    font-size: 4.5rem;
+    padding-left: 3rem
+}
+
+.hero-tagline {
+    font-family: 'Noto Sans Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--muted);
+    margin: 0
+}
+
+.hero-right {
+    display: flex
+}
+
+.hero-card {
+    display: flex;
+    flex-direction: column;
+    gap: .85rem;
+    text-decoration: none;
+    color: inherit
+}
+
+.hero-card-img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 8px
+}
+
+.hero-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: .55rem
+}
+
+.hero-card-title {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--navy-dark);
+    margin: 0;
+    text-align: center
+}
+
+.hero-card:hover .hero-card-title {
+    color: var(--crimson)
+}
+
+.hero-card-excerpt {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: .95rem;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden
+}
+
+.read-btn-outline {
+    display: inline-block;
+    align-self: center;
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: .9rem;
+    color: var(--navy-dark);
+    border: 1.5px solid var(--navy-dark);
+    border-radius: 999px;
+    padding: .35rem 1.5rem;
+    transition: background .15s, color .15s;
+    margin-top: .25rem
+}
+
+.hero-card:hover .read-btn-outline {
+    background: var(--navy-dark);
+    color: #fff
+}
+
+.read-btn {
+    display: inline-block;
+    background: var(--crimson);
+    color: #fff;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    padding: .55rem 1.3rem;
+    border-radius: 3px;
+    transition: background .15s
+}
+
+.read-btn:hover {
+    background: var(--crimson-h)
+}
+
+.cat-tag {
+    display: inline-block;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: .35rem
+}
+
+@media (max-width:768px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem
+    }
+
+    .hero-brand {
+        font-size: 3rem
+    }
+}
+
+.recent-section {
+    padding: 2.75rem 0;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-gray)
+}
+
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 1.75rem;
+    border-bottom: 2px solid var(--navy);
+    padding-bottom: .6rem
+}
+
+.section-title {
+    font-size: 1rem;
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--navy)
+}
+
+.more-link {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .82rem;
+    font-weight: 600;
+    color: var(--crimson)
+}
+
+.more-link:hover {
+    text-decoration: underline
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem
+}
+
+@media (max-width:860px) {
+    .articles-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (max-width:540px) {
+    .articles-grid {
+        grid-template-columns: 1fr
+    }
+}
+
+.article-link {
+    display: flex;
+    flex-direction: column;
+    color: inherit
+}
+
+.article-img-wrap {
+    overflow: hidden;
+    border-radius: 2px;
+    margin-bottom: .75rem;
+    aspect-ratio: 16/9;
+    background: var(--bg-alt)
+}
+
+.article-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease
+}
+
+.article-card:hover .article-img {
+    transform: scale(1.04)
+}
+
+.cat-tag.dark {
+    color: var(--navy);
+    display: block;
+    margin-bottom: .2rem
+}
+
+.article-body time {
+    display: block;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .78rem;
+    color: var(--muted);
+    margin-bottom: .3rem
+}
+
+.article-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: .35rem
+}
+
+.article-card:hover .article-title {
+    color: var(--crimson)
+}
+
+.article-excerpt {
+    font-size: .9rem;
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 0 0 .3rem
+}
+
+.article-author-wrap {
+    display: flex;
+    align-items: center;
+    gap: .5rem
+}
+
+.article-author-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border)
+}
+
+.article-author {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .82rem;
+    color: var(--muted)
+}
+
+.article-author-link {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .82rem;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color .15s
+}
+
+.article-author-link:hover {
+    color: var(--crimson)
+}
+
+.topics-section {
+    padding: 2.75rem 0;
+    background: var(--bg-gray);
+    border-bottom: 1px solid var(--border)
+}
+
+.topics-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    align-items: start
+}
+
+@media (max-width:700px) {
+    .topics-split {
+        grid-template-columns: 1fr;
+        gap: 2.5rem
+    }
+}
+
+.topic-col-title {
+    font-size: 1.55rem;
+    font-weight: 700;
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    color: var(--navy);
+    margin: 0;
+    letter-spacing: -.01em
+}
+
+.topic-desc {
+    font-size: .93rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0 0 1.25rem
+}
+
+.topic-list {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.topic-list-item {
+    border-top: 1px solid var(--border);
+    padding: .9rem 0
+}
+
+.topic-list-item:last-child {
+    border-bottom: 1px solid var(--border)
+}
+
+.topic-post-link {
+    display: block;
+    color: inherit
+}
+
+.topic-post-link:hover .topic-post-title {
+    color: var(--crimson)
+}
+
+.topic-post-title {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: .3rem;
+    color: var(--navy);
+    transition: color .15s
+}
+
+.topic-post-title--gold {
+    color: var(--gold)
+}
+
+.topic-post-link:hover .topic-post-title--gold {
+    color: var(--crimson)
+}
+
+.topic-post-excerpt {
+    margin: 0;
+    font-size: .88rem;
+    color: var(--muted);
+    line-height: 1.55
+}
+
+.substack-section {
+    background: var(--teal-dark);
+    color: #fff;
+    padding: 4rem 1.25rem;
+    text-align: center
+}
+
+.substack-inner {
+    max-width: 560px;
+    margin: 0 auto
+}
+
+.substack-heading {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    line-height: 1.3
+}
+
+.substack-sub {
+    font-size: 1rem;
+    color: rgb(255 255 255 / .72);
+    line-height: 1.7;
+    margin: 0 0 2.5rem
+}
+
+.substack-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem
+}
+
+.substack-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: .5rem
+}
+
+.substack-brand {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+    color: #fff
+}
+
+.substack-tagline {
+    font-size: .95rem;
+    color: rgb(255 255 255 / .72);
+    line-height: 1.55;
+    margin: 0
+}
+
+.substack-author {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .82rem;
+    color: rgb(255 255 255 / .5);
+    margin: .25rem 0 1rem
+}
+
+.substack-embed {
+    width: 100%;
+    max-width: 480px;
+    background: #fff0;
+    border: none
+}
+
+.site-footer {
+    background: var(--navy);
+    color: rgb(255 255 255 / .65);
+    padding: 0 1.25rem
+}
+
+.ftr-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2.5rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid rgb(255 255 255 / .08)
+}
+
+@media (max-width:760px) {
+    .ftr-top {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media (max-width:480px) {
+    .ftr-top {
+        grid-template-columns: 1fr
+    }
+}
+
+.ftr-logo {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: .75rem
+}
+
+.ftr-mission {
+    font-size: .9rem;
+    color: rgb(255 255 255 / .48);
+    line-height: 1.65;
+    margin: 0;
+    word-break: break-all;
+    max-width: 94%;
+}
+
+.ftr-col h5 {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: .85rem
+}
+
+.ftr-col li {
+    margin-bottom: .45rem
+}
+
+.ftr-col a {
+    font-size: .88rem;
+    color: rgb(255 255 255 / .55);
+    transition: color .15s
+}
+
+.ftr-col a:hover {
+    color: #fff
+}
+
+.ftr-bottom {
+    padding: 1.25rem 0;
+    text-align: center;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .78rem;
+    color: rgb(255 255 255 / .3)
+}
+
+.shadow-sm {
+    --tw-shadow: 0 1px 2px 0 #0000000d;
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color)
+}
+
+@media (max-width:640px) {
+    .site-nav {
+        display: none
+    }
+
+    .hero-title {
+        font-size: 1.75rem
+    }
+
+    .nl-email {
+        width: 100%
+    }
+
+    .mission-quote {
+        font-size: 1.35rem
+    }
+}
+
+@media (min-width:900px) {
+    .hero-title {
+        font-size: 2.75rem
+    }
+}
+
+.posts-page {
+    background: var(--bg);
+    min-height: 60vh;
+    padding-bottom: 4rem
+}
+
+.posts-page .container {
+    max-width: 1280px
+}
+
+.page-header {
+    padding: 2.25rem 0 1.5rem;
+    border-bottom: 2px solid var(--navy);
+    margin-bottom: 2rem
+}
+
+.page-heading {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -.01em
+}
+
+.page-sub {
+    margin: .3rem 0 0;
+    color: var(--muted);
+    font-size: .95rem
+}
+
+.posts-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2.5rem;
+    align-items: start
+}
+
+.posts-sidebar {
+    position: sticky;
+    top: 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem
+}
+
+.filter-label {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: .95rem;
+    font-weight: 700;
+    color: var(--navy-dark)
+}
+
+.filter-select {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: .88rem;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: .45rem .7rem;
+    appearance: auto;
+    cursor: pointer
+}
+
+.filter-select:focus {
+    outline: 2px solid var(--navy);
+    outline-offset: 1px
+}
+
+@media (max-width:768px) {
+    .posts-layout {
+        grid-template-columns: 1fr
+    }
+
+    .posts-sidebar {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem
+    }
+
+    .filter-group {
+        flex: 1 1 160px
+    }
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem
+}
+
+@media (max-width:860px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (max-width:520px) {
+    .cards-grid {
+        grid-template-columns: 1fr
+    }
+}
+
+.pcard {
+    background: #fff;
+    border: 1px solid #dde0e8;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease
+}
+
+.pcard:hover {
+    border-color: #c8cdd9;
+    box-shadow: 0 8px 24px rgb(29 36 51 / .10);
+    transform: translateY(-2px)
+}
+
+.pcard-link {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: inherit;
+    text-decoration: none
+}
+
+.pcard-img-wrap {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: #eceef2;
+    flex-shrink: 0
+}
+
+.pcard-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.pcard-cat {
+    position: absolute;
+    top: .55rem;
+    left: .55rem;
+    background: rgb(22 30 54 / .78);
+    color: #fff;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    padding: .18rem .45rem;
+    border-radius: 2px
+}
+
+.pcard-body {
+    padding: 1rem 1rem .6rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .45rem
+}
+
+.pcard-title {
+    font-size: .975rem;
+    font-weight: 700;
+    line-height: 1.38;
+    color: var(--text)
+}
+
+.pcard:hover .pcard-title {
+    color: var(--crimson)
+}
+
+.pcard-desc {
+    font-size: .83rem;
+    color: var(--muted);
+    line-height: 1.58;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden
+}
+
+.pcard-author {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .6rem 1rem .7rem;
+    border-top: 1px solid #eceef3;
+    background: #fafbfd
+}
+
+.pcard-avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #dde0e8;
+    flex-shrink: 0
+}
+
+.pcard-author-name {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: .8rem;
+    color: var(--muted);
+    font-weight: 500;
+    flex: 1
+}
+
+.pcard-author-link {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: .8rem;
+    color: var(--muted);
+    font-weight: 500;
+    flex: 1;
+    text-decoration: none;
+    transition: color .15s
+}
+
+.pcard-author-link:hover {
+    color: var(--crimson)
+}
+
+.pcard-date {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .72rem;
+    font-weight: 500;
+    color: #94a0b8;
+    white-space: nowrap
+}
+
+.post-page {
+    background: var(--bg);
+    min-height: 100vh;
+    padding: 2.5rem 1.25rem 5rem
+}
+
+.post-hero {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 780px;
+    margin: 0 auto 0
+}
+
+.post-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgb(8 12 24 / .55) 0%, transparent 60%)
+}
+
+.post-box {
+    max-width: 860px;
+    margin: 2.5rem auto 0;
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 3rem 3.5rem 4rem
+}
+
+.post-header {
+    margin-bottom: 1.5rem
+}
+
+.post-title {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1.22;
+    color: var(--navy-dark);
+    margin: .4rem 0 .75rem
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: .83rem;
+    color: var(--muted);
+    margin-bottom: .6rem
+}
+
+.post-author {
+    font-weight: 600;
+    color: var(--text)
+}
+
+.post-author-link {
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    transition: color .15s
+}
+
+.post-author-link:hover {
+    color: var(--crimson)
+}
+
+.post-date::before {
+    content: '·';
+    margin-right: .75rem
+}
+
+.post-subtitle {
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: .5rem 0 0;
+    font-style: italic
+}
+
+.post-divider {
+    border: none;
+    border-top: 2px solid var(--border);
+    margin: 1.75rem 0
+}
+
+.post-body {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 1.13rem;
+    line-height: 1.9;
+    color: var(--text)
+}
+
+.post-body p {
+    margin: 0 0 1.4em;
+    text-align: justify;
+    word-break: break-all
+}
+
+.post-body h2 {
+    font-size: 1.45rem;
+    margin: 2rem 0 .6rem;
+    color: var(--navy-dark)
+}
+
+.post-body h3 {
+    font-size: 1.2rem;
+    margin: 1.6rem 0 .5rem;
+    color: var(--navy-dark)
+}
+
+.post-body blockquote {
+    border-left: 4px solid var(--crimson);
+    margin: 1.8rem 0;
+    padding: .6rem 1.4rem;
+    background: var(--bg-alt);
+    border-radius: 0 4px 4px 0;
+    font-style: italic;
+    color: var(--muted)
+}
+
+.post-body a {
+    color: var(--crimson);
+    text-decoration: underline;
+    text-underline-offset: 2px
+}
+
+.post-body a:hover {
+    color: var(--crimson-h)
+}
+
+.post-body ul,
+.post-body ol {
+    padding-left: 1.5rem;
+    margin: 0 0 1.4em;
+    list-style: revert
+}
+
+.post-body li {
+    margin-bottom: .35em
+}
+
+.post-body img {
+    border-radius: 6px;
+    margin: 1.5rem 0
+}
+
+@media (max-width:768px) {
+    .post-box {
+        padding: 2rem 1.25rem 3rem
+    }
+
+    .post-title {
+        font-size: 1.55rem
+    }
+
+    .post-hero {
+        height: 220px;
+        border-radius: 0
+    }
+
+    .post-page {
+        padding: 0 0 4rem
+    }
+}
+
+.author-bio {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: var(--bg-alt);
+    border-radius: 8px;
+    font-size: .875rem;
+    border: 1px solid var(--border);
+    line-height: 1.6
+}
+
+.author-bio-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: inherit;
+    text-decoration: none;
+    transition: background .15s, border-color .15s;
+    width: 100%
+}
+
+.author-bio:hover {
+    background: #f0f2f7;
+    border-color: #d0d5e0
+}
+
+.author-bio-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0
+}
+
+.author-bio-text {
+    display: flex;
+    flex-direction: column;
+    gap: .35rem
+}
+
+.author-bio-name {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+    transition: color .15s
+}
+
+.author-bio-link:hover .author-bio-name {
+    color: var(--crimson)
+}
+
+.author-bio-desc {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: .9rem;
+    line-height: 1.75;
+    color: var(--muted);
+    margin: 0
+}
+
+.essays-page {
+    background: var(--bg);
+    min-height: 60vh;
+    padding-bottom: 5rem
+}
+
+.essays-page .container {
+    max-width: 1280px
+}
+
+.essays-header {
+    padding: 2.5rem 0 1.75rem
+}
+
+.essays-title {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 0 .6rem;
+    letter-spacing: -.02em;
+    line-height: 1.15
+}
+
+.essays-rule {
+    border: none;
+    border-top: 2px solid var(--navy);
+    margin: 0 0 1.5rem
+}
+
+.essays-filter-bar {
+    display: flex;
+    align-items: center;
+    gap: .75rem
+}
+
+.essays-filter-label {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted)
+}
+
+.essays-filter-select {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .88rem;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: .4rem .65rem;
+    appearance: auto;
+    cursor: pointer;
+    min-width: 180px
+}
+
+.essays-filter-select:focus {
+    outline: 2px solid var(--navy);
+    outline-offset: 1px
+}
+
+.essays-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    align-items: start
+}
+
+@media (max-width:1024px) {
+    .essays-cols {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (max-width:560px) {
+    .essays-cols {
+        grid-template-columns: 1fr
+    }
+}
+
+.essay-col-heading {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin: 0 0 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--navy)
+}
+
+.essay-list {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.essay-item {
+    border-bottom: 1px solid var(--border);
+    padding: .85rem 0
+}
+
+.essay-item:first-child {
+    padding-top: 0
+}
+
+.essay-item-link {
+    display: block;
+    color: inherit;
+    text-decoration: none
+}
+
+.essay-item-link:hover .essay-item-title {
+    color: var(--crimson)
+}
+
+.essay-item-title {
+    display: block;
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--navy);
+    margin-bottom: .3rem;
+    transition: color .15s
+}
+
+.essay-item-author {
+    display: block;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted)
+}
+
+.dg-page {
+    background: var(--bg);
+    padding-bottom: 5rem
+}
+
+.dg-header {
+    padding: 3rem 0 2.5rem;
+    text-align: center
+}
+
+.dg-header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem
+}
+
+.dg-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain
+}
+
+.dg-title {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0;
+    letter-spacing: -.01em
+}
+
+.dg-description {
+    max-width: 900px;
+    margin: 1rem auto 0;
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.7
+}
+
+.dg-rule {
+    width: 100px;
+    height: 3px;
+    background: var(--gold);
+    border: none;
+    margin: 1.5rem auto 0
+}
+
+.dg-featured {
+    margin: 3rem 0 4rem
+}
+
+.dg-featured-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center
+}
+
+@media (max-width:768px) {
+    .dg-featured-grid {
+        grid-template-columns: 1fr
+    }
+}
+
+.dg-featured-img-wrap {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #eceef2
+}
+
+.dg-featured-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.dg-featured-content {
+    display: flex;
+    flex-direction: column
+}
+
+.dg-featured-title {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.4;
+    margin: 0 0 1rem
+}
+
+.dg-featured-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .9rem;
+    color: var(--muted)
+}
+
+.dg-featured-date {
+    font-weight: 600
+}
+
+.dg-featured-date::after {
+    content: '•';
+    margin-left: 1rem;
+    color: var(--muted)
+}
+
+.dg-featured-excerpt {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text)
+}
+
+.dg-related {
+    margin: 4rem 0 0;
+    padding: 3rem 0 0;
+    border-top: 2px solid var(--border)
+}
+
+.dg-related-title {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 0 2.5rem;
+    letter-spacing: -.01em
+}
+
+.dg-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem
+}
+
+@media (max-width:860px) {
+    .dg-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (max-width:540px) {
+    .dg-grid {
+        grid-template-columns: 1fr
+    }
+}
+
+.dg-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease
+}
+
+.dg-card:hover {
+    border-color: #c8cdd9;
+    box-shadow: 0 8px 24px rgb(29 36 51 / .10);
+    transform: translateY(-2px)
+}
+
+.dg-card-link {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: inherit;
+    text-decoration: none
+}
+
+.dg-card-img-wrap {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: #eceef2;
+    flex-shrink: 0
+}
+
+.dg-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease
+}
+
+.dg-card:hover .dg-card-img {
+    transform: scale(1.04)
+}
+
+.dg-card-body {
+    padding: 1rem 1.25rem .6rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1
+}
+
+.dg-card-title {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 1.12rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--navy);
+    margin: 0 0 .75rem;
+    transition: color .15s
+}
+
+.dg-card-link:hover .dg-card-title {
+    color: var(--crimson)
+}
+
+.dg-card-excerpt {
+    margin: 0 0 1rem;
+    font-size: .95rem;
+    line-height: 1.6;
+    color: var(--muted);
+    flex: 1
+}
+
+.dg-card-footer {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    margin-top: auto;
+    padding: .6rem 1.25rem .75rem;
+    border-top: 1px solid #eceef3;
+    background: #fafbfd;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .78rem
+}
+
+.dg-card-avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #dde0e8;
+    flex-shrink: 0
+}
+
+.dg-card-author {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--muted);
+    flex: 1
+}
+
+.dg-card-author-link {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--muted);
+    flex: 1;
+    text-decoration: none;
+    transition: color .15s
+}
+
+.dg-card-author-link:hover {
+    color: var(--crimson)
+}
+
+.dg-card-date {
+    font-size: .72rem;
+    font-weight: 500;
+    color: #94a0b8;
+    white-space: nowrap;
+    margin-left: auto
+}
+
+.author-page {
+    background: var(--bg);
+    min-height: 100vh;
+    padding: 3rem 1.25rem 4rem
+}
+
+.author-header {
+    max-width: 900px;
+    margin: 0 auto 3.5rem
+}
+
+.author-hero {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 2rem
+}
+
+.author-avatar {
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border)
+}
+
+.author-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem
+}
+
+.author-name {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--navy-dark);
+    margin: 0
+}
+
+.author-bio {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: .95rem;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0
+}
+
+.author-divider {
+    border: none;
+    border-top: 2px solid var(--navy);
+    margin: 0
+}
+
+.author-articles {
+    max-width: 900px;
+    margin: 0 auto
+}
+
+.author-articles-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-bottom: .75rem
+}
+
+.author-articles-title {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+    margin: 0;
+    letter-spacing: -.01em
+}
+
+.article-count {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .82rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .05em
+}
+
+.author-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem
+}
+
+@media (max-width:860px) {
+    .author-articles-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (max-width:540px) {
+    .author-articles-grid {
+        grid-template-columns: 1fr
+    }
+
+    .author-hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center
+    }
+
+    .author-avatar {
+        width: 120px;
+        height: 120px
+    }
+
+    .author-name {
+        font-size: 1.75rem
+    }
+}
+
+.author-article-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease
+}
+
+.author-article-card:hover {
+    border-color: #c8cdd9;
+    box-shadow: 0 8px 20px rgb(29 36 51 / .08);
+    transform: translateY(-2px)
+}
+
+.author-article-link {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: inherit;
+    text-decoration: none
+}
+
+.author-article-img-wrap {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: var(--bg-alt);
+    flex-shrink: 0
+}
+
+.author-article-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease
+}
+
+.author-article-card:hover .author-article-img {
+    transform: scale(1.05)
+}
+
+.author-article-body {
+    padding: 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .55rem
+}
+
+.author-article-title {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--text);
+    margin: 0
+}
+
+.author-article-card:hover .author-article-title {
+    color: var(--crimson)
+}
+
+.author-article-excerpt {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: .88rem;
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1
+}
+
+.author-article-date {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .78rem;
+    color: var(--muted);
+    margin-top: auto
+}
+
+.no-articles {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--muted);
+    padding: 3rem 1rem
+}
+
+/* ── Hamburger / Mobile nav ── */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    margin-left: auto;
+    flex-shrink: 0
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform .3s ease, opacity .3s ease
+}
+
+.mobile-nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--navy-dark);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: transform .4s cubic-bezier(.77, 0, .175, 1);
+    visibility: hidden;
+    pointer-events: none
+}
+
+.mobile-nav-overlay.open {
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: all
+}
+
+.mobile-nav-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 2rem;
+    line-height: 1;
+    padding: 0;
+    opacity: .8;
+    transition: opacity .15s
+}
+
+.mobile-nav-close:hover {
+    opacity: 1
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem
+}
+
+.mobile-nav-links a {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, .85);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    transition: color .15s
+}
+
+.mobile-nav-links a:hover {
+    color: var(--gold)
+}
+
+@media(max-width:640px) {
+    .site-nav {
+        display: none
+    }
+
+    .hamburger-btn {
+        display: flex
+    }
+}
+
+/* ── Section header responsive wrap ── */
+@media(max-width:620px) {
+    .section-header {
+        flex-wrap: wrap
+    }
+
+    .more-link {
+        margin-top: .5rem
+    }
+}

@@ -1,0 +1,11 @@
+--2026-04-26 16:30:25--  https://dg.imgix.net/scott-hubbard-7bjhg5xk-en/square/scott-hubbard-7bjhg5xk-5761166c998096324014106cebad90b5.jpg?ts=1745350469
+Resolving dg.imgix.net (dg.imgix.net)... 151.101.158.208, 2a04:4e42:25::720
+Connecting to dg.imgix.net (dg.imgix.net)|151.101.158.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 600970 (587K) [image/jpeg]
+Saving to: ‘avatar-hubbard.jpg’
+
+avatar-hubbard.jpg    0%[                   ]       0  --.-KB/s               avatar-hubbard.jpg  100%[==================>] 586.88K  3.77MB/s    in 0.2s    
+
+2026-04-26 16:30:25 (3.77 MB/s) - ‘avatar-hubbard.jpg’ saved [600970/600970]
+
