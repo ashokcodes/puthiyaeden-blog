@@ -121,8 +121,8 @@ img#logo {
 
 .site-nav a:hover {
     color: var(--text);
-    font-weight: 700;
-    border-bottom-color: var(--gold)
+    /* keep font-weight unchanged to prevent layout shift on hover */
+    border-bottom-color: var(--gold);
 }
 
 .give-btn {
@@ -1256,9 +1256,9 @@ img#logo {
 }
 
 .essay-col-heading {
-    font-family: Inter, system-ui, sans-serif;
-    font-size: .75rem;
-    font-weight: 700;
+    font-family: Manjari, system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
     letter-spacing: .12em;
     text-transform: uppercase;
     color: var(--navy);
@@ -1304,6 +1304,147 @@ img#logo {
 }
 
 .essay-item-author {
+    display: block;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted)
+}
+
+/* ── Bhakthichinthakal Page Styles ── */
+.bhakthichinthakal-page {
+    background: var(--bg);
+    min-height: 60vh;
+    padding-bottom: 5rem
+}
+
+.bhakthichinthakal-page .container {
+    max-width: 1280px
+}
+
+.bhakthichinthakal-header {
+    padding: 2.5rem 0 1.75rem
+}
+
+.bhakthichinthakal-title {
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 0 .6rem;
+    letter-spacing: -.02em;
+    line-height: 1.15
+}
+
+.bhakthichinthakal-rule {
+    border: none;
+    border-top: 2px solid var(--navy);
+    margin: 0 0 1.5rem
+}
+
+.bhakthichinthakal-filter-bar {
+    display: flex;
+    align-items: center;
+    gap: .75rem
+}
+
+.bhakthichinthakal-filter-label {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted)
+}
+
+.bhakthichinthakal-filter-select {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: .88rem;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: .4rem .65rem;
+    appearance: auto;
+    cursor: pointer;
+    min-width: 180px
+}
+
+.bhakthichinthakal-filter-select:focus {
+    outline: 2px solid var(--navy);
+    outline-offset: 1px
+}
+
+.bhakthichinthakal-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    align-items: start
+}
+
+@media (max-width:1024px) {
+    .bhakthichinthakal-cols {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (max-width:560px) {
+    .bhakthichinthakal-cols {
+        grid-template-columns: 1fr
+    }
+}
+
+.bhakthichintha-col-heading {
+    font-family: Manjari, system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin: 0 0 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--navy)
+}
+
+.bhakthichintha-list {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.bhakthichintha-item {
+    border-bottom: 1px solid var(--border);
+    padding: .85rem 0
+}
+
+.bhakthichintha-item:first-child {
+    padding-top: 0
+}
+
+.bhakthichintha-item-link {
+    display: block;
+    color: inherit;
+    text-decoration: none
+}
+
+.bhakthichintha-item-link:hover .bhakthichintha-item-title {
+    color: var(--crimson)
+}
+
+.bhakthichintha-item-title {
+    display: block;
+    font-family: 'Noto Serif Malayalam', 'Noto Serif', Georgia, serif;
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--navy);
+    margin-bottom: .3rem;
+    transition: color .15s
+}
+
+.bhakthichintha-item-author {
     display: block;
     font-family: Inter, system-ui, sans-serif;
     font-size: .72rem;
@@ -1788,6 +1929,70 @@ img#logo {
     flex: 1
 }
 
+/* Author page tabs & pagination */
+.author-tabs {
+    display: flex;
+    gap: 0.75rem;
+    margin: 1rem 0 1.25rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.author-tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0.45rem 0.75rem;
+    font-family: Manjari, system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.author-tab-btn.active {
+    color: var(--navy);
+    border-bottom-color: var(--navy);
+}
+
+.author-tabs-content .author-tab-pane {
+    display: none;
+    padding-top: 1rem;
+}
+
+.author-tabs-content .author-tab-pane.active {
+    display: block;
+}
+
+.author-pagination {
+    display: flex;
+    gap: .5rem;
+    margin: 1rem 0 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.pag-btn {
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    padding: .35rem .6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 36px;
+}
+
+.pag-btn.active {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+}
+
+.pag-btn[disabled] {
+    opacity: .5;
+    cursor: default;
+}
+
 .author-article-date {
     font-family: Inter, system-ui, sans-serif;
     font-size: .78rem;
@@ -1918,15 +2123,15 @@ img#logo {
 
 /* ── Video Embed ── */
 .video-embed {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 6px;
-  margin: 1.5rem 0;
-  overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    overflow: hidden;
 }
 
 .video-embed iframe {
-  width: 100%;
-  height: 100%;
-  border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
 }
